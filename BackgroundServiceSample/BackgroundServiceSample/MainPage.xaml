@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BackgroundServiceSample.MainPage">
+
+    <StackLayout>
+        <Label Text="Start developing now" FontSize="Title" x:Name="counter" Padding="30,10,30,10"/>
+        <Button Text="Start" x:Name="Start" Clicked="Start_Clicked"></Button>
+        <Button x:Name="Stop" Clicked="Stop_Clicked" Text="Stop"></Button>
+        <Button x:Name="Show" Text="show" Clicked="Show_Clicked"></Button>
+
+        <StackLayout>
+            <ListView x:Name="datalist">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding title}" Detail="{Binding datee}"></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+        
+    </StackLayout>
+
+</ContentPage>
